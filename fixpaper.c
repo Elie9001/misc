@@ -5,7 +5,7 @@
  --
 
  To compile this:
-     gcc fixpaper.c -o fixpaper -ffast-math -O -lGL -lglut -lm -std=gnu99
+    gcc fixpaper.c -o fixpaper -ffast-math -Ofast -lGL -lglut -lm -std=gnu99
 
 
  Copyright 2021, Elie Goldman Smith
