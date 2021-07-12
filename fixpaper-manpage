@@ -1,0 +1,27 @@
+Fixpaper
+--------
+
+== Usage ==
+
+Command-line:
+   ./fixpaper [input image filename]
+
+== Interface ==
+
+Left Panel: The uncropped image, black & white with contrast auto-enhanced.
+Green Lines: The cropping area
+Right Panel: Same as the left, but cropped.
+
+== Controls ==
+
+Left click: Drag 1 corner of the cropping area
+Right click: Drag all corners of the cropping area
+     1: drag corner 1
+     2: drag corner 2
+W or 3: drag corner 3
+Q or 4: drag corner 4
+< or >: rotate 90 degrees
+Backspace: Reset the cropping area
+
+Enter: save
+ESC: quit

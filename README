@@ -1,0 +1,25 @@
+Other useful programs
+
+
+# fixpaper.c
+
+If you've ever taken a picture of a paper document, and then tried to print it out later, you might notice that the quality sucks.
+
+Fixpaper is a tiny app to clean up the photo and make it nicely printable.
+It's faster & easier than using a typical image editing program. Especially if you have a lot of pictures of papers.
+
+Right now it's just a desktop app.
+Maybe someday I'll make a version for mobile (Android or iOS). You're free to do that yourself if you want.
+
+It works on Linux.
+And probably Windows - but I haven't tested on Windows yet. Try it and let me know.
+
+
+
+
+
+# xnightfilter.c
+
+Simple night-time screen filter for Linux/X11
+It filters out blue light.
+You can also invert colors.
