@@ -39,6 +39,8 @@ typedef struct {
  float y;
 } vec2;
 
+#define isFloatNonzeroEnough(f) ((f) < -0.000001f || 0.000001f < (f))
+
 #define DEFAULT_WINDOW_WIDTH  640
 #define DEFAULT_WINDOW_HEIGHT 360
 int _viewport_x = DEFAULT_WINDOW_WIDTH;
@@ -299,8 +301,8 @@ void draw()
  q.x = a.x*c.y - a.x*b.y - d.x*c.y + d.x*b.y - c.x*a.y + c.x*d.y + b.x*a.y - b.x*d.y;
  q.y = a.y*c.x - a.y*b.x - d.y*c.x + d.y*b.x - c.y*a.x + c.y*d.x + b.y*a.x - b.y*d.x;
  float aFactor, bFactor, cFactor, dFactor; // These factors will tell OpenGL how to interpolate texture coordinates in proper perspective.
- if (p.x && p.y) {
-  if (q.x && q.y) {
+ if (isFloatNonzeroEnough(p.x) && isFloatNonzeroEnough(p.y)) {
+  if (isFloatNonzeroEnough(q.x) && isFloatNonzeroEnough(q.y)) {
    // The crop area has no parallel lines.
    // So we finish calculating the vanishing points:
    p.x = (a.x*c.x*b.y - a.x*c.x*d.y - a.x*d.x*b.y + a.x*d.x*c.y - b.x*c.x*a.y + b.x*c.x*d.y + b.x*d.x*a.y - b.x*d.x*c.y) / p.x;
@@ -327,7 +329,7 @@ void draw()
    }
   }
  }
- else if (q.x && q.y) {
+ else if (isFloatNonzeroEnough(q.x) && isFloatNonzeroEnough(q.y)) {
   // The crop area is a trapezoid:
   // lines AB and CD are parallel.
   if (fabs(a.x-b.x) > fabs(a.y-b.y)) {
