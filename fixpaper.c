@@ -63,8 +63,8 @@ int finished_everything=0;
 
 
 void update_output_filename() {
-	time_t t; time(&t);
-	strftime(output_filename, OUTPUT_FILENAME_MAX_CHARS, "paper-%F-%T.png", localtime(&t));
+ time_t t; time(&t);
+ strftime(output_filename, OUTPUT_FILENAME_MAX_CHARS, "paper-%F-%T.png", localtime(&t));
 }
 
 
@@ -623,10 +623,10 @@ int main(int argc, char **argv)
   return 1;
  }
  input_filename = argv[1];
-	glutInitDisplayMode(GLUT_RGBA | GLUT_DOUBLE);
-	glutInitWindowSize(DEFAULT_WINDOW_WIDTH, DEFAULT_WINDOW_HEIGHT);
-	glutInit(&argc, argv);
-	glutCreateWindow("Clean up a photo of a paper");
+ glutInitDisplayMode(GLUT_RGBA | GLUT_DOUBLE);
+ glutInitWindowSize(DEFAULT_WINDOW_WIDTH, DEFAULT_WINDOW_HEIGHT);
+ glutInit(&argc, argv);
+ glutCreateWindow("Clean up a photo of a paper");
  glutReshapeFunc(reshape_window);
  glutMouseFunc(mouse_func);
  glutMotionFunc(mouse_motion);
@@ -636,6 +636,6 @@ int main(int argc, char **argv)
  glutDisplayFunc(draw);
  init();
  atexit(done);
-	glutMainLoop();
-	return 0;
+ glutMainLoop();
+ return 0;
 }
